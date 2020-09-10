@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <link  rel="stylesheet" type="text/css" href="index.css" />
+    </head>
+    <body>
+        <h3>手动发送Ethereum交易，nonce 是想要覆盖的交易的值，发送新交易，在当前值基础+1</h3>
+        <h3>如果需要更换账户，点击 disconnect</h3>
+        <div class='panel'>
+            <div>
+                <span class="item-name">From</span><input disabled='true' id="from" class="item" type="text"/><span class="comment"></span>
+            </div>
+            <div>
+                <span class="item-name">To</span><input id="to" class="item" type="text"/><span class="comment"></span>
+            </div>
+            <div>
+                <span class="item-name">Value</span><input id="value" class="item" type="text" value="0"/><span class="comment"></span>
+            </div>
+            <div>
+                <span class="item-name">nonce</span><input id="nonce" class="item" type="text"/><span class="comment"></span>
+            </div>
+            <div>
+                <span class="item-name">Gas Limit</span><input id="gaslimit" class="item" type="number"/><span class="comment"></span>
+            </div>
+            <div>
+                <span class="item-name">Gas Price</span><input id="gasprice" class="item" type="number"/><span class="comment">Gwei</span>
+            </div>
+            <div>
+                <span class="item-name">Data</span><textarea id="data" class="item" type="text"></textarea><span class="comment"></span>
+            </div>
+         
+
+            <button id="sendtx" class="sendTx">SendTx</button>
+            <div>
+                <span class="item-name">TxHash</span><input disabled='true' id="txhash" class="item" type="text"/><span class="comment"></span>
+            </div>
+            
+        </div>
+        <button id="disconnect">Disconnect</button>
+    </br>
+         <h4>gasprice data source :https://etherscan.io/gastracker</h4>
+        GasPrice Low:<input disabled='true' id='gas-low' type='text'/>
+        Average:<input disabled='true' id='gas-mid' type='text'/>
+        High:<input disabled='true' id='gas-high' type='text'/>
+        <script src="dist/bundle.js"></script>
+    </body>
+</html>
