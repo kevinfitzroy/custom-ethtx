@@ -5,7 +5,7 @@ module.exports = {
         port: '8099',
         progress: true,
         contentBase: './build',
-        compress: false
+        compress: true
     },
   entry: './src/index.js',
   output: {

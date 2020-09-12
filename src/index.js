@@ -2,6 +2,8 @@ import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
 import Web3 from "web3"
 import $ from 'jquery'
+import * as utils from '@walletconnect/utils'
+import _ from './decode.js'
 
 const fromElem = document.getElementById('from');
 const sendTx = document.getElementById('sendtx');
@@ -76,15 +78,15 @@ sendTx.addEventListener('click',()=>{
     })(), 
     gasPrice: web3.utils.toHex( web3.utils.toWei($('#gasprice').val().trim(),'gwei')), // Optional
     gas: web3.utils.toHex($('#gaslimit').val().trim()), // Optional
-    value: web3.utils.toHex($('#value').val().trim()), // Optional
+    value: web3.utils.toHex(web3.utils.toWei($('#value').val().trim(),'ether') ), // Optional
     nonce: web3.utils.toHex($('#nonce').val().trim()) // Optional
   };
   console.log(tx);
 
   connector
     .sendTransaction(tx)
-    .then((result) => {
-      // Returns transaction id (hash)
+    .then((result) => { 
+      // Returns transaction id (hash) 
       console.log(result);
       $('#txhash').val(result);
     })

@@ -12,3 +12,24 @@ textarea{
     margin-top: 20px;
     height: 300px;
 }
+.area{
+    display: block;
+    width: 45%;;
+    border:1px #ddd solid;
+    padding:20px;
+}
+.leftarea{
+    float: left;
+}
+.rightarea{
+    float: right;
+    
+}
+#rawtxdata {
+    height: 200px;
+    width:100%;
+}
+#rawtxdecode{
+    height: 300px;
+    width:100%;
+}

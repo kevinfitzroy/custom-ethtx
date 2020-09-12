@@ -12,7 +12,9 @@
   "dependencies": {
     "@walletconnect/client": "^1.2.2",
     "@walletconnect/qrcode-modal": "^1.2.2",
+    "@walletconnect/utils": "^1.2.2",
     "@walletconnect/web3-provider": "^1.2.2",
+    "ethereum-tx-decoder": "^3.0.0",
     "jquery": "^3.5.1",
     "web3": "^1.2.11",
     "webpack": "^4.44.1"

@@ -5,6 +5,7 @@
         <link  rel="stylesheet" type="text/css" href="index.css" />
     </head>
     <body>
+    <div class="leftarea area">
         <h3>手动发送Ethereum交易，nonce 是想要覆盖的交易的值，发送新交易，在当前值基础+1</h3>
         <h3>如果需要更换账户，点击 disconnect</h3>
         <div class='panel'>
@@ -43,6 +44,18 @@
         GasPrice Low:<input disabled='true' id='gas-low' type='text'/>
         Average:<input disabled='true' id='gas-mid' type='text'/>
         High:<input disabled='true' id='gas-high' type='text'/>
-        <script src="dist/bundle.js"></script>
+        
+    </div>
+    <div class="rightarea area">
+        <h3>rawTx decode</h3>
+        <div>
+            <span class="item-name">RawTxData</span><textarea id="rawtxdata" class="item decode" type="text"></textarea><span class="comment"></span>
+        </div>
+        <button id='decode'>Decode</button>
+        <div>
+            <span class="item-name">RawTxData</span><textarea id="rawtxdecode" disabled='true' class="item decode" type="text"></textarea><span class="comment"></span>
+        </div>
+    </div>
+    <script src="dist/bundle.js"></script>
     </body>
 </html>
